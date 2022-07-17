@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "869701556214",
+    "project_id": "sukaido-dcefc",
+    "storage_bucket": "sukaido-dcefc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869701556214:android:5c247dcaee7d7d14fcd9d7",
+        "android_client_info": {
+          "package_name": "com.zeekands.restaurant_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869701556214-tudcf8naaasphn5ddqor44p4ti0irff3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuH098YIbUy_kbUh9URoYYrX_Le0hTM0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869701556214-tudcf8naaasphn5ddqor44p4ti0irff3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869701556214:android:91f97f0736f765cefcd9d7",
+        "android_client_info": {
+          "package_name": "com.zeekands.sukaido_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869701556214-tudcf8naaasphn5ddqor44p4ti0irff3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuH098YIbUy_kbUh9URoYYrX_Le0hTM0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869701556214-tudcf8naaasphn5ddqor44p4ti0irff3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
