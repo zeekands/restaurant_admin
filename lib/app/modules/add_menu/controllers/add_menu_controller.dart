@@ -14,27 +14,12 @@ class AddMenuController extends GetxController {
   TextEditingController hargaController = TextEditingController();
 
   final selectJenis = [
-    "Snack",
-    "Kuah",
-    "Minuman",
+    "Pulsa",
+    "Data",
+    "Game",
   ];
 
-  final selectedJenis = "Snack".obs;
-
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
+  final selectedJenis = "Pulsa".obs;
 
   Future getImage(bool gallery) async {
     ImagePicker picker = ImagePicker();
@@ -57,10 +42,10 @@ class AddMenuController extends GetxController {
     }
   }
 
-  Future<String> uploadFile(File _image) async {
+  Future<String> uploadFile(File image) async {
     final storageReference =
-        FirebaseStorage.instance.ref().child('Menus/${_image.path}');
-    await storageReference.putFile(_image);
+        FirebaseStorage.instance.ref().child('Menus/${image.path}');
+    await storageReference.putFile(image);
     print('File Uploaded');
     String returnURL = "";
     await storageReference.getDownloadURL().then(
@@ -72,18 +57,20 @@ class AddMenuController extends GetxController {
   }
 
   Future<void> saveImages(
-    File _images,
+    File images,
     String nama,
     int harga,
     String jenis,
+    String deskripsi,
   ) async {
-    String imageURL = await uploadFile(_images);
+    String imageURL = await uploadFile(images);
     final refDoc = ref.doc();
     final data = {
       "id": refDoc.id,
       "nama": nama,
       "harga": harga,
       "jenis": jenis,
+      "deskripsi": deskripsi,
       "images": imageURL
     };
     refDoc.set(data);
@@ -94,15 +81,17 @@ class AddMenuController extends GetxController {
     String nama,
     int harga,
     String jenis,
-    File _images,
+    File images,
+    String deskripsi,
   ) async {
-    String imageURL = await uploadFile(_images);
+    String imageURL = await uploadFile(images);
     final refDoc = ref.doc(id);
     final data = {
       "id": id,
       "nama": nama,
       "harga": harga,
       "jenis": jenis,
+      "deskripsi": deskripsi,
       "images": imageURL
     };
     refDoc.set(data);

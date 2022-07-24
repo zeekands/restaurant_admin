@@ -18,7 +18,7 @@ class HomeController extends GetxController {
   final image = XFile("").obs;
 
   final selectedValueIndex = 0.obs;
-  final buttonText = ["Snack", "Kuah", "Minuman"];
+  final buttonText = ["Pulsa", "Data", "Game"];
   final iconButton = [
     "assets/images/ic_makanan.png",
     "assets/images/ic_kuah.png",
@@ -41,16 +41,6 @@ class HomeController extends GetxController {
   void onInit() async {
     super.onInit();
     FlutterNativeSplash.remove();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
   }
 
   Future getImage(bool gallery, XFile image) async {

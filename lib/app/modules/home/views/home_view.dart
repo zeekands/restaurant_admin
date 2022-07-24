@@ -88,8 +88,51 @@ class HomeView extends GetView<HomeController> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           20.verticalSpace,
-          Text("Pilih Menu Disini",
-              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w500)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Pilih Menu Disini",
+                  style:
+                      TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w500)),
+              IconButton(
+                  onPressed: () {
+                    Get.bottomSheet(Container(
+                      height: 0.5.sh,
+                      width: 1.sw,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/app_logo.png',
+                            height: 200.h,
+                            width: 300.w,
+                            fit: BoxFit.cover,
+                          ),
+                          20.verticalSpace,
+                          Text(
+                            "Terimakasih telah menggunakan Easy Topup\nJika ada pertanyaan atau keluhan silahkan \nhubungi 089620494008 Gerall",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[400],
+                              fontSize: 16.sp,
+                            ),
+                          )
+                        ],
+                      ),
+                    ));
+                  },
+                  icon: Icon(
+                    Icons.info_outline_rounded,
+                    color: Colors.red,
+                  )),
+            ],
+          ),
           Row(
             children: [
               ...List.generate(
@@ -425,12 +468,6 @@ class HomeView extends GetView<HomeController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  image,
-                  width: 20.w,
-                  height: 20.h,
-                  fit: BoxFit.cover,
-                ),
                 5.horizontalSpace,
                 Text(
                   text,

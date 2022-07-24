@@ -81,7 +81,8 @@ class AddMenuView extends GetView<AddMenuController> {
               Container(
                 width: 1.sw,
                 height: 50.h,
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
@@ -115,14 +116,15 @@ class AddMenuView extends GetView<AddMenuController> {
                         backgroundColor: Colors.red,
                         colorText: Colors.white,
                         borderRadius: 10,
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         snackStyle: SnackStyle.FLOATING);
                   } else {
                     await controller.saveImages(
                         File(controller.image.value.path),
                         controller.namaController.text,
                         int.parse(controller.hargaController.text),
-                        controller.selectedJenis.value);
+                        controller.selectedJenis.value,
+                        "");
                     Get.back();
                     Get.snackbar("Berhasil", "Menu berhasil ditambahkan.",
                         backgroundColor: Colors.green, colorText: Colors.white);

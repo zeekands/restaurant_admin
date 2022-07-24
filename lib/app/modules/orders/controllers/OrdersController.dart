@@ -15,20 +15,6 @@ class OrdersController extends GetxController {
 
   final selectedValueIndex = 0.obs;
   final buttonText = ["menunggu", "selesai"];
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   Stream<List<Orders>> readOrder(String status) => FirebaseFirestore.instance
       .collection('order')
